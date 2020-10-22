@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/main_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            //맨위의 Title
+            <TextView
+                android:id="@+id/cartTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#f5f5dc"
+                android:text="[Ju.AC]Cart-"
+                android:textSize="5mm"
+                android:textColor="#8f784b" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d3d3d3" />
+
+            //이름등을 명세하는 양식을 나타낸 부분
+            <LinearLayout
+                android:id="@+id/cartLay"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/allSelect"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:checked="false"/>
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="IMAGE"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ITEM"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OPTION"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PRICE"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="QTY"
+                    android:textColor="#d3d3d3" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/zero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textSize="6mm"
+                android:textColor="#737368"
+                android:text="장바구니가 비었습니다!" />
+
+            //Item add Layout
+
+            <LinearLayout
+                android:id="@+id/add_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d3d3d3"/>
+            </LinearLayout>
+
+            //Bt
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/gotoHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="#ece6cc"
+                    android:text="돌아가기"
+                    android:textColor="#737368" />
+
+                <Button
+                    android:id="@+id/gotoBuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="#ece6cc"
+                    android:text="주문하기"
+                    android:textColor="#737368" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

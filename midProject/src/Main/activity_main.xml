@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#f5f5dc"
+        android:text="[Ju.AC]Select Items-"
+        android:textSize="5mm"
+        android:textColor="#8f784b" />
+
+    <RelativeLayout
+        android:id="@+id/Item_Band"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/Title">
+
+        <CheckBox
+            android:id="@+id/selectCK_Band"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:checked="false" />
+
+        <ImageView
+            android:id="@+id/band_Img"
+            android:layout_toRightOf="@id/selectCK_Band"
+            android:src="@drawable/band"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/hanJj"
+            android:layout_toRightOf="@id/band_Img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[주문폭주!][20191650 이한정 착용]"
+            android:textColor="#ff0000" />
+
+        <TextView
+            android:id="@+id/bandTitle"
+            android:layout_toRightOf="@id/band_Img"
+            android:layout_below="@+id/hanJj"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="펄이 펄펄~ 스크런치" />
+
+        <TextView
+            android:id="@+id/bandExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/band_Img"
+            android:layout_below="@+id/bandTitle"
+            android:text="비비드한 컬러로 인기 만점 이에요!" />
+
+        <TextView
+            android:id="@+id/bandPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/band_Img"
+            android:layout_below="@+id/bandExplain"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="5dp"
+            android:textColor="#4c4c45"
+            android:text="6500" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/bandPrice"
+            android:layout_below="@+id/bandExplain"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="5dp"
+            android:textColor="#4c4c45"
+            android:text="원" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Item_Band_color_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Item_Band"
+        android:layout_marginLeft="40dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/bandCnt"
+            android:textSize="3mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="수량 :" />
+
+        <TextView
+            android:id="@+id/cntTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/bandCnt"
+            android:textSize="3mm"
+            android:text="1"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:id="@+id/cntPlusBt"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:text="+"
+            android:layout_toRightOf="@+id/cntTxt" />
+
+        <Button
+            android:id="@+id/cntMinusBt"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:text="-"
+            android:layout_toRightOf="@+id/cntPlusBt" />
+
+        <TextView
+            android:id="@+id/bandColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cntMinusBt"
+            android:layout_marginRight="5dp"
+            android:textSize="3mm"
+            android:text="색상 :" />
+
+        <TextView
+            android:id="@+id/colorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/bandColor"
+            android:text="색상선택" />
+
+        <Spinner
+            android:id="@+id/colorSpinner"
+            android:entries="@array/bandColor"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/colorTxt"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/Item_Band_color_cnt"
+        android:background="#bdbebd" />
+
+    <RelativeLayout
+        android:id="@+id/Item_CirclePin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/line1">
+
+        <CheckBox
+            android:id="@+id/selectCK_CirclePin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:checked="false" />
+
+        <ImageView
+            android:id="@+id/circlePin_Img"
+            android:layout_toRightOf="@id/selectCK_CirclePin"
+            android:src="@drawable/circlepin"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/circlePinTitle"
+            android:layout_toRightOf="@id/circlePin_Img"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(무광)동글동글 헤어올림 집게핀" />
+
+        <TextView
+            android:id="@+id/circlePinExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/circlePin_Img"
+            android:layout_below="@+id/circlePinTitle"
+            android:text="키치한 컬러감을 가진 핀이에요!" />
+
+        <TextView
+            android:id="@+id/circlePinPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/circlePin_Img"
+            android:layout_below="@+id/circlePinExplain"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="5dp"
+            android:textColor="#4c4c45"
+            android:text="5800" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/circlePinPrice"
+            android:layout_below="@+id/circlePinExplain"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="5dp"
+            android:textColor="#4c4c45"
+            android:text="원" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Item_CirclePin_color_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/Item_CirclePin"
+        android:layout_marginLeft="40dp">
+
+        <TextView
+            android:id="@+id/circlePinCnt"
+            android:textSize="3mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="수량 :" />
+
+        <TextView
+            android:id="@+id/circlePinCntTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/circlePinCnt"
+            android:textSize="3mm"
+            android:text="1"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:id="@+id/circlePinCntPlusBt"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:text="+"
+            android:layout_toRightOf="@+id/circlePinCntTxt" />
+
+        <Button
+            android:id="@+id/circlePinCntMinusBt"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:text="-"
+            android:layout_toRightOf="@+id/circlePinCntPlusBt" />
+
+        <TextView
+            android:id="@+id/circlePinColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/circlePinCntMinusBt"
+            android:layout_marginRight="5dp"
+            android:textSize="3mm"
+            android:text="색상 :" />
+
+        <TextView
+            android:id="@+id/circlePinColorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/circlePinColor"
+            android:text="색상선택" />
+
+        <Spinner
+            android:id="@+id/circlePinColorSpinner"
+            android:entries="@array/circlePinColor"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/circlePinColorTxt" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/Item_CirclePin_color_cnt"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#bdbebd" />
+
+    <RelativeLayout
+        android:id="@+id/Item_SquarePin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/line2">
+
+        <CheckBox
+            android:id="@+id/selectCK_SquarePin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:checked="false" />
+
+        <ImageView
+            android:id="@+id/SquarePin_Img"
+            android:layout_toRightOf="@id/selectCK_SquarePin"
+            android:src="@drawable/squarepin"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/SquarePinTitle"
+            android:layout_toRightOf="@id/SquarePin_Img"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(쥔장강추!)심플 스퀘어 헤어올림 집게핀" />
+
+        <TextView
+            android:id="@+id/SquarePinExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/SquarePin_Img"
+            android:layout_below="@+id/SquarePinTitle"
+            android:text="어디에나 잘어울리는 심플한 집게핀이에요♥" />
+
+        <TextView
+            android:id="@+id/SquarePinPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/SquarePin_Img"
+            android:layout_below="@+id/SquarePinExplain"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="5dp"
+            android:textColor="#4c4c45"
+            android:text="7300" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/SquarePinPrice"
+            android:layout_below="@+id/SquarePinExplain"
+            android:textSize="3.5mm"
+            android:layout_marginBottom="5dp"
+            android:textColor="#4c4c45"
+            android:text="원" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Item_SquarePin_color_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@+id/Item_SquarePin"
+        android:layout_marginLeft="40dp">
+
+        <TextView
+            android:id="@+id/SquarePinCnt"
+            android:textSize="3mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="수량 :" />
+
+        <TextView
+            android:id="@+id/SquarePinCntTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/SquarePinCnt"
+            android:textSize="3mm"
+            android:text="1"
+            android:layout_marginRight="5dp" />
+
+        <Button
+            android:id="@+id/SquarePinCntPlusBt"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:text="+"
+            android:layout_toRightOf="@+id/SquarePinCntTxt" />
+
+        <Button
+            android:id="@+id/SquarePinCntMinusBt"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:text="-"
+            android:layout_toRightOf="@+id/SquarePinCntPlusBt" />
+
+        <TextView
+            android:id="@+id/SquarePinColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/SquarePinCntMinusBt"
+            android:layout_marginRight="5dp"
+            android:textSize="3mm"
+            android:text="색상 :" />
+
+        <TextView
+            android:id="@+id/SquarePinColorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/SquarePinColor"
+            android:text="색상선택" />
+
+        <Spinner
+            android:id="@+id/SquarePinColorSpinner"
+            android:entries="@array/squarePinColor"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/SquarePinColorTxt" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/basket_or_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Item_SquarePin_color_cnt">
+
+        <Button
+            android:id="@+id/allSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#f4ead0"
+            android:textColor="#737368"
+            android:text="전체선택" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_toRightOf="@+id/allSelect"
+            android:layout_width="0.5dp"
+            android:layout_height="wrap_content"
+            android:background="#392f31" />
+
+
+        <Button
+            android:id="@+id/basketBt"
+            android:layout_toRightOf="@id/line3"
+            android:layout_width="161dp"
+            android:layout_height="match_parent"
+            android:background="#ece6cc"
+            android:textColor="#737368"
+            android:text="장바구니" />
+
+        <Button
+            android:id="@+id/buyBt"
+            android:layout_width="161dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/basketBt"
+            android:background="#ece6cc"
+            android:textColor="#737368"
+            android:text="구매하기" />
+    </RelativeLayout>
+        
+</RelativeLayout>

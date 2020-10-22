@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bandColor">
+        <item>색상선택</item>
+        <item>그린</item>
+        <item>라벤더</item>
+        <item>인디핑크</item>
+        <item>애쉬베이지</item>
+        <item>크림베이지</item>
+    </string-array>
+    <string-array name="circlePinColor">
+        <item>색상선택</item>
+        <item>개나리</item>
+        <item>구름</item>
+        <item>말차</item>
+        <item>연어</item>
+    </string-array>
+    <string-array name="squarePinColor">
+        <item>색상선택</item>
+        <item>골드</item>
+        <item>로즈골드</item>
+        <item>실버</item>
+    </string-array>
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <GridLayout
+            android:id="@+id/mainBuy"
+            android:columnCount="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            //맨위의 Title
+            <TextView
+                android:id="@+id/cartTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#f5f5dc"
+                android:text="[Ju.AC]Buy-"
+                android:textSize="5mm"
+                android:textColor="#8f784b" />
+
+            //이름등을 명세하는 양식을 나타낸 부분
+            <GridLayout
+                android:id="@+id/buyLay"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:text="IMAGE"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:text="ITEM"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:text="OPTION"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:text="PRICE"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:text="QTY"
+                    android:textColor="#d3d3d3" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:text="TOTAL"
+                    android:textColor="#d3d3d3" />
+            </GridLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d3d3d3" />
+
+            //Item add
+            <GridLayout
+                android:id="@+id/add_cart"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:columnCount="1">
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/resultPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="textEnd"
+                android:textSize="2.3mm"
+                android:gravity="end" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d3d3d3" />
+
+            //identify add
+            <GridLayout
+                android:id="@+id/ident_buy"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:columnCount="1">
+
+                <GridLayout
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </GridLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d3d3d3" />
+
+                <GridLayout
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </GridLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d3d3d3" />
+
+                <GridLayout
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </GridLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d3d3d3" />
+
+                <GridLayout
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </GridLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d3d3d3" />
+
+                <GridLayout
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </GridLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#d3d3d3" />
+            </GridLayout>
+
+            <Button
+                android:id="@+id/finalBuy"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="구매하기"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:background="#ece6cc"
+                android:textColor="#737368" />
+        </GridLayout>
+    </ScrollView>
+</GridLayout>
