@@ -1,6 +1,5 @@
 # Mobile Programming Mid Project
 
-### 20191644 이연주
 ---
 
 **목차**
