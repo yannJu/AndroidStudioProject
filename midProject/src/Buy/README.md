@@ -57,3 +57,6 @@
 첫번째 액티비티에서 전환되었을 경우 `Index`처리를 하지 않고 개별적으로 `putExtra()` 되었기 때문에, `ckMain`이 `true`인 경우에만 `buyNum`에 할당해주고, 그렇지 않은 경우에는 `new ArrayList`로 초기화 되어있게 된다.
 
 이전의 액티비티들과 동일하게, 해당상품에 대한 정보를 동적인 뷰에 추가하여 화면에 add 함으로써 화면을 구현하였다.
+
+[- 첫번째 액티비티(Main)](https://github.com/yannJu/AndroidStudioProject/tree/master/midProject/src/Main)
+[- 두번째 액티비티(Cart)](https://github.com/yannJu/AndroidStudioProject/tree/master/midProject/src/Cart)
