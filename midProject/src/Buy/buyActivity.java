@@ -258,20 +258,20 @@ public class buyActivity extends AppCompatActivity{
         GridLayout.LayoutParams MgridParam = new GridLayout.LayoutParams(MrowSpan, McolSpan);
         MgridParam.height = 120;
 
-        nameLay.addView(receiver, 200, 80);
-        nameLay.addView(name, 500, 80);
+        nameLay.addView(receiver, 200, 120);
+        nameLay.addView(name, 500, 120);
 
-        addressLay.addView(address, 200, 80);
-        addressLay.addView(mainAdr, 1000, 80);
+        addressLay.addView(address, 200, 120);
+        addressLay.addView(mainAdr, 1000, 120);
 
-        phoneLay.addView(call, 200, 80);
-        phoneLay.addView(phoneNum, 500, 80);
+        phoneLay.addView(call, 200, 120);
+        phoneLay.addView(phoneNum, 500, 120);
 
-        emailLay.addView(email, 200, 80);
-        emailLay.addView(emailAdr, 500, 80);
+        emailLay.addView(email, 200, 120);
+        emailLay.addView(emailAdr, 500, 120);
 
-        messageLay.addView(message, 200, 80);
-        messageLay.addView(mes, 500, 80);
+        messageLay.addView(message, 200, 120);
+        messageLay.addView(mes, 500, 120);
 
         final String[] finalBuyItem = buyItem;
         buyBt.setOnClickListener(new View.OnClickListener() {
