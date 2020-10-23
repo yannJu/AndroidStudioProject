@@ -79,10 +79,39 @@ for (int num:cartNum){
 하지만 현재로써 문제점이 하나 있는데,
 * `Cart`객체에 있는 `ArrayList(String[])` 에 add되는 원소가 `String[]` 이므로, main에 있는 인덱스 List에서 만약 원소가 제거되어도, `ArrayList(String[])`에서는 제거되지 않는다. ~> *메모리 낭비가 될 수 있다.*
 
-위와 같이 동적인 뷰를 추가한 후에, `돌아가기, 구매하기` 버튼에 대한 이벤트를 처리하였는데, `MainActivity.class`에서 처리한 것처럼, 구현하였다.
+```java
+//Item Img, Title, Option, Price, Cnt 생성
+  itemImg = new ImageView(this);
+  itemImg.setLayoutParams(cartParam);
+  itemTitle = new TextView(this);
+  itemTitle.setLayoutParams(cartParam);
+  itemTitle.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+  itemOption = new TextView(this);
+  itemOption.setLayoutParams(cartParam);
+  itemPrice = new TextView(this);
+  itemPrice.setLayoutParams(cartParam);
+  itemPrice.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+  itemCnt = new TextView(this);
+  itemCnt.setLayoutParams(cartParam);
+  itemCnt.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+```
+추가할 뷰들을 생성하고, Parameter들을 설정한다.
 
 ```java
-  //MainActivity에 Item, CartIdx의 값을 반환
+//레이아웃에 추가
+  cartLay.addView(itemCk);
+  cartLay.addView(itemImg);
+  cartLay.addView(itemTitle);
+  cartLay.addView(itemOption);
+  cartLay.addView(itemPrice);
+  cartLay.addView(itemCnt);
+  cartLay.setLayoutParams(cartParam);
+  lay.addView(cartLay);
+```
+추가한 뷰들에 대해 출력할 텍스트나, 체크박스들을 초기화 해준 후에, 레이아웃에 추가한다.
+그 이후에 `돌아가기, 구매하기` 버튼에 대한 이벤트를 처리하였는데, `MainActivity.class`에서 처리한 것과 구현하였다.
+```java
+  //MainActivity에 Item, CartIdx의 값을 반환 (go to Main)
   Intent backData = new Intent();
   backData.putExtra("backItem", item);
   backData.putExtra("backNum", finalCartNum);
@@ -92,6 +121,7 @@ for (int num:cartNum){
 `돌아가기` 버튼을 클릭하였을 때에, `Cart`객체와 `Index`를 포함하는 리스트를 반환하고, `setResult(RESULT_OK, 반환데이터)`를 통해 해당 액티비티에서 데이터를 반환하고 `finish()`를 통해 액티비티를 종료하였다.
 
 ```java
+  //go to Buy
   Intent buyData = new Intent(getApplicationContext(), buyActivity.class);
   buyData.putExtra("buyItem", item);
   buyData.putExtra("buyNum", buyNum);

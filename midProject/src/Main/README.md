@@ -57,6 +57,21 @@
     });
 ```
 그 다음, 버튼에 관련한 이벤트를 처리해 주었다. `PBt, MBt`을 이용하여 수량을 추가하거나 감소시키도록 하였으며, 버튼외에도 `Spinner`를 이용하여 옵션(색상)을 선택할 수 있게 하였다.
+
+```java
+//Band Color Spinner Event
+  spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+      @Override
+      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+          selectedText.setText("" + parent.getItemAtPosition(position));
+      }
+      @Override
+      public void onNothingSelected(AdapterView<?> parent){
+          selectedText.setText("색상선택");
+      }
+  });
+```
+색상이 선택되지 않은 경우에는 default값으로 **색상선택** 으로 지정하였고, 그 외에 선택 된 경우는 선택한 텍스트가 출력되도록 구현하였다.
 이 또한 위와 같은 식으로 모든 상품에 대해 구현해 주었다.
 
 ```java

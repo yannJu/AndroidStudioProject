@@ -45,12 +45,13 @@
 
 따라서 대부분이 레이아웃에 동적으로 뷰를 추가하는 부분이고 이러한 부분은 이전 액티비티에서 보았던 것과 비슷하게 구현이 되어있다.
 
+먼저 이전 액티비티에서 값을 (`Cart, ArrayList, CkBox등`) 받아온 것을 변수에 할당하고, 레이아웃에 해당하는 `Id`를 설정한다.
+
 ```java
   if (ckMain == false) {
        buyNum = getIntent.getExtras().getIntegerArrayList("buyNum");
    }
  ```
-먼저 이전 액티비티에서 값을 (`Cart, ArrayList, CkBox등`) 받아온 것을 변수에 할당하고, 레이아웃에 해당하는 `Id`를 설정한다.
 
 그 다음 첫번째 액티비티에서 전환된 것인지 두번째 액티비티에서 전환된 것인지에 따라 상품의 `Index`가 담긴 리스트인 `buyNum`이 달라지게 된다.
 
@@ -58,5 +59,31 @@
 
 이전의 액티비티들과 동일하게, 해당상품에 대한 정보를 동적인 뷰에 추가하여 화면에 add 함으로써 화면을 구현하였다.
 
+동적인 뷰들을 다 추가하여 레이아웃이 완성된 후에는 버튼이벤트를 처리하였다.
+
+```java
+buyBt.setOnClickListener(new View.OnClickListener() {
+  @Override
+  public void onClick(View view) {
+      if (name.getText().toString().equals("") || mainAdr.getText().toString().equals("") || phoneNum.getText().toString().equals("") || emailAdr.getText().toString().equals("") || mes.getText().toString().equals("")){
+          AlertDialog.Builder noInfo = new AlertDialog.Builder(buyActivity.this);
+          noInfo.setMessage("정확한 정보를 입력해주세요!");
+          noInfo.setPositiveButton("확인", null);
+          noInfo.create().show();
+      }
+      else {
+          Intent getIntent = getIntent();
+          setResult(RESULT_OK);
+          Toast.makeText(getApplicationContext(), "구매가 완료되었습니다", Toast.LENGTH_LONG).show();
+          finish();
+      }
+  }
+});
+```
+`name, mainAdr, phoneNum, emailAdr, mes`는 개인정보(수취인명, 주소, 전화번호, 이메일주소, 배송메시지) 등을 입력받는 `EditText View`이고 이 뷰가 한칸이라도 비어있으면 경고창을 띄우게 하였다.
+
+그렇지 않은 경우, 구매가 완료되었다는 `Toas message`를 띄우고 액티비티를 종료하게 된다.
+
+###### 이전 액티비티 
 [- 첫번째 액티비티(Main)](https://github.com/yannJu/AndroidStudioProject/tree/master/midProject/src/Main)
 [- 두번째 액티비티(Cart)](https://github.com/yannJu/AndroidStudioProject/tree/master/midProject/src/Cart)
