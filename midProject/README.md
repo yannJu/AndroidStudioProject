@@ -131,9 +131,6 @@
 
 ###### 경고창 확인
 
-![emptyCart](https://github.com/yannJu/AndroidStudioProject/blob/master/resultCapture/emptyCart.PNG)
-먼저, 장바구니가 비어있음을 확인한다.
-
 1. 색상을 설정하지 않고 장바구니 혹은 구매하기 버튼을 클릭하였을 경우
 
 ![noselectColor](https://github.com/yannJu/AndroidStudioProject/blob/master/resultCapture/noselectColor.PNG)
